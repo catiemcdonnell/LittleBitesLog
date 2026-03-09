@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Bits Log</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Little Bites Log</h1>
+        </div>
+        <div class="theme-selector">
+            <!--<button type="button" data-theme-toggle aria-label="Change to light theme">Change to light theme (or icon
+                here)</button>-->
+            <i id="darkModeToggle" class="fa-regular fa-moon" data-theme-toggle aria-label="Change to dark theme"></i>
+        </div>
+    </header>
+    <div class="intro">
+        <h1>Every new bite is an adventure!</h1>
+        <p>Use this tracker to log foods your baby tries, their reactions and favorite discoveries. It was inspired by
+            our own journey introducing foods to our daughter, Scarlett, and wanting a simple way to capture each new
+            milestone along the way.</p>
+        <button id="addFood">Add New Food</a>
+    </div>
+
+    <div id="foodModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Add a New Food</h2>
+            </div>
+            <div class="modal-body">
+                <form id="userForm">
+                    <div>
+                        <label for="food">Food:</label>
+                        <input type="text" id="food" name="food" placeholder="Enter the new food">
+                    </div>
+                    <div>
+                        <label for="type">Type:</label>
+                        <select id="type">
+                            <option value="">--Select--</option>
+                            <option value="fruit">Fruit</option>
+                            <option value="vegetable">Vegetable</option>
+                            <option value="protein">Protein</option>
+                            <option value="grain">Grain</option>
+                            <option value="dairy">Dairy</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="date">Date</label>
+                        <input type="date" id="date">
+                    </div>
+                    <div class="rating">
+                        <label for="rating">Rating</label>
+                        <input type="radio" id="rating-like" name="rating" value="😄">
+                        <label for="rating-like">😄</label>
+                        <input type="radio" id="rating-neutral" name="rating" value="😐">
+                        <label for="rating-neutral">😐</label>
+                        <input type="radio" id="rating-dislike" name="rating" value="😖">
+                        <label for="rating-dislike">😖</label>
+                    </div>
+                    <div>
+                        <label for="reaction">Reaction:</label>
+                        <input type="text" id="reaction" name="reaction" placeholder="Reaction">
+                    </div>
+                    <div>
+                        <label for="notes">Notes:</label>
+                        <input type="text" id="notes" name="notes" placeholder="Notes">
+                    </div>
+                    <button type="submit">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="progress-container">
+
+        <div class="progress-header">
+            <h3>Food Journey 🍓</h3>
+            <span id="progressText">0 / 100 foods</span>
+        </div>
+
+        <div class="progress-bar">
+            <div id="progressFill"></div>
+        </div>
+
+    </div>
+
+    <!-- STORED DATA -->
+    <div class="stored-foods">
+        <h2>Foods Tried</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Food</th>
+                    <th>Type</th>
+                    <th>Date</th>
+                    <th>Rating</th>
+                    <th>Reaction</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody id="dataTable">
+
+            </tbody>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="includes.js"></script>
+
+</body>
+
+
+</html>
