@@ -1,6 +1,6 @@
 /* styles - little bites log */
 @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
 
 :root{
     --mustard: #F4A261;
@@ -42,9 +42,9 @@ header{margin:20px 0; display:flex; justify-content:space-between;}
 button{background:var(--sage); padding:8px 22px; border-radius:50px; text-decoration:none; transition:.3s all; font-size:18px; color:#fff; display:inline-block; border:none;}
 button:hover{background: var(--mustard);}
 
-h1{color:var(--h1); font-size:50px; line-height:60px;}
-h2{color:var(--clay); margin-bottom:10px; text-align:center; font-size:30px;}
-.logo h1{text-transform:uppercase; font-size:28px; line-height:28px;}
+h1{color:var(--h1); font-size:50px; line-height:60px; font-family: "Bricolage Grotesque", sans-serif;}
+h2{color:var(--clay); margin-bottom:10px; text-align:center; font-size:30px; font-family: "Bricolage Grotesque", sans-serif;}
+.logo h1{text-transform:uppercase; font-size:28px; line-height:28px; font-family: "Bricolage Grotesque", sans-serif; text-transform:lowercase;}
 p{font-size:18px; line-height:25px; color:var(--text)}
 
 .intro{width:60%; margin:50px auto; text-align:center;}
